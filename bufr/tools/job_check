@@ -1,0 +1,8 @@
+
+COM=bufr/driver/product
+ls $COM/postsnd.e* | wc
+grep -i "exit status"  $COM/postsnd.e*
+
+COM=bufr_ctl/driver/product
+ls $COM/postsnd.e* | wc
+grep -i "exit status"  $COM/postsnd.e*

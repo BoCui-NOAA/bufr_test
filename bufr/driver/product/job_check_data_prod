@@ -1,0 +1,18 @@
+
+COM=/lfs/h2/emc/ptmp/$LOGNAME/com_bufr/gfs/prod
+#COM=/lfs/h2/emc/ptmp/lin.gan/retro1-v16-ecf/para/com/gfs/v16.3/gfs.20211104/00/atmos
+COM=/lfs/h2/emc/ptmp/lin.gan/retro1-v16-ecf/para/com/gfs/v16.3
+
+PDY=20211104
+cyc=00
+
+ls $COM/gfs.$PDY/$cyc/atmos/bufr.t00z | wc
+ls $COM/gfs.$PDY/$cyc/atmos/wmo/gfs_collective*.postsnd*       | wc
+ls $COM/gfs.$PDY/$cyc/atmos/gempak/gfs_${PDY}${cyc}.*          | wc
+
+exit
+
+   2124    2124   48825
+      9       9     243
+      2       2      38
+

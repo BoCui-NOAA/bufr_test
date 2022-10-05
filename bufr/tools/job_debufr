@@ -1,0 +1,19 @@
+
+debufr=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/debufr
+
+COM=/lfs/h2/emc/ptmp/$LOGNAME/com2_mod/gfs/prod
+COMprod=/lfs/h1/ops/prod/com/gfs/v16.2
+
+PDY=20220610
+cyc=00
+filelist="bufr.045001.2022061000  bufr.724915.2022061000  bufr.999918.2022061000"
+filelist="bufr.045001.2022061000"
+
+for file in $filelist; do
+  $debufr $COM/gfs.$PDY/bufr.t00z/$file 
+  mv bufr.045001.2022061000.debufr.out out_mod_$file
+  $debufr $COMprod/gfs.$PDY/$cyc/atmos/bufr.t${cyc}z/$file 
+  mv bufr.045001.2022061000.debufr.out out_prod_$file
+  diff out_mod_$file out_prod_$file
+done
+
