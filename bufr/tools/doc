@@ -1,3 +1,2 @@
 
-/lfs/h1/ops/para/packages/gfs.v16.2.0/sorc
-/lfs/h1/ops/para/output/20220615/gfs_atmos_postsnd_12.o5595602
+job_cp_bufr : copt updated GFS package to current directory

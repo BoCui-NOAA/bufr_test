@@ -1,8 +1,15 @@
+# COM_run is the dir with simlidied run script 
 
+COM_run=/lfs/h2/emc/vpppg/noscrub/$LOGNAME/BUFR/bufr
+
+cd /ptmp/$LOGNAME
+mkdir -p bufr
+cd bufr
 mkdir -p driver/product            
-COM_in=/lfs/h2/emc/vpppg/noscrub/$LOGNAME/BUFR/bufr
-cp -p $COM_in/driver/product/job*       driver/product/
-cp -p $COM_in/driver/product/run*wcoss2 driver/product/
+cp -p $COM_run/driver/product/job*       driver/product/
+cp -p $COM_run/driver/product/run*wcoss2 driver/product/
+
+# COM_in is the dir with the latest GFS package
 
 COM_in=/lfs/h2/emc/vpppg/noscrub/$LOGNAME/git/global-workflow
 
