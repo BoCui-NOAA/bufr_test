@@ -1,2 +1,2 @@
 
-job_cp_bufr : copt updated GFS package to current directory
+job_cp_bufr : copy updated GFS package to current directory
