@@ -1,0 +1,5 @@
+
+qsub run_postsnd.sh.wcoss2
+exit
+grep -i "exit status" postsnd.e*
+exit

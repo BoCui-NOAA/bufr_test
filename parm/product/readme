@@ -1,0 +1,7 @@
+
+add new sttions
+
+cp /lfs/h2/emc/vpppg/save/geoffrey.manikin/staids/bufr_stalist.meteo.gfs .
+cp  /lfs/h2/emc/vpppg/save/geoffrey.manikin/gfs_bufr/bufr_ij13km.txt bufr_ij13km.txt_new
+
+ cp -rp /lfs/h2/emc/vpppg/save/geoffrey.manikin/gfs_bufr/ij_gaussian/

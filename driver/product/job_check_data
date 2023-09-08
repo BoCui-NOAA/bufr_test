@@ -1,0 +1,15 @@
+
+COM=/lfs/h2/emc/ptmp/$LOGNAME/com_bufr/gfs/prod
+
+PDY=20210823
+
+ls $COM/gfs.$PDY/bufr.t00z | wc
+ls $COM/gfs.$PDY/wmo       | wc
+ls $COM/gfs.$PDY/gempak    | wc
+
+exit
+
+   2124    2124   48825
+      9       9     243
+      2       2      38
+

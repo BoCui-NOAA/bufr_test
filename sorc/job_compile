@@ -1,0 +1,9 @@
+
+sh build_all.sh_bufr_only 
+exit
+sh build_all.sh
+exit
+sh checkout.sh >& checkout.out
+sh build_all.sh >& build_all.out
+sh link_fv3gfs.sh emc wcoss2 >& link_fv3gfs.out
+

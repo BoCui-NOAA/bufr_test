@@ -1,0 +1,54 @@
+
+mkdir -p driver/product            
+COM_in=/lfs/h2/emc/vpppg/noscrub/$LOGNAME/BUFR/bufr
+cp -p $COM_in/driver/product/job*       driver/product/
+cp -p $COM_in/driver/product/run*wcoss2 driver/product/
+
+COM_in=/lfs/h2/emc/vpppg/noscrub/$LOGNAME/git/global-workflow
+COM_in=/lfs/h1/ops/prod/packages/gfs.v16.3.7                     
+
+mkdir -p fix/product
+cp $COM_in/fix/product/gfs_collective*.list     fix/product
+
+mkdir exec  
+cp $COM_in/sorc/gsi.fd/ush/getncd*        exec
+
+mkdir -p parm/product
+cp $COM_in/parm/product/bufr_stalist.meteo.gfs   parm/product/
+cp $COM_in/parm/product/bufr_ij13km.txt          parm/product/
+cp $COM_in/parm/product/bufr_gfs_class1fv3.tbl   parm/product/
+
+#cp -rp $COM_in/sorc/gsi.fd               sorc/            
+
+mkdir jobs
+cp -p $COM_in/jobs/*SND*  jobs/
+
+cp -rp $COM_in/versions    .
+cp -rp $COM_in/modulefiles .
+
+
+mkdir scripts
+cp -p $COM_in/scripts/*snd*             scripts/            
+
+mkdir ush    
+cp -p $COM_in/ush/*snd*                  ush/       
+cp -p $COM_in/ush/*bufr*                 ush/       
+cp -p $COM_in/ush/gfs_bfr2gpk.sh         ush/       
+
+mkdir sorc
+
+cp -p  $COM_in/sorc/fv3gfs_build.cfg     sorc/            
+cp -p  $COM_in/sorc/machine-setup.sh     sorc/            
+cp -p  $COM_in/sorc/partial_build.sh     sorc/            
+cp -p  $COM_in/sorc/build_libs.sh        sorc/            
+cp -p  $COM_in/sorc/build_gfs_util.sh    sorc/            
+cp -rp $COM_in/sorc/*bufr*               sorc/            
+cp -p  $COM_in/sorc/build_all.sh         sorc/            
+cp -p  $COM_in/sorc/checkout.sh          sorc/            
+
+cp -rp $COM_in/sorc/gsi.fd               sorc/            
+
+cp /lfs/h2/emc/vpppg/noscrub/$LOGNAME/BUFR/tools/job_compile             sorc/
+cp /lfs/h2/emc/vpppg/noscrub/$LOGNAME/BUFR/tools/build_all.sh_bufr_only  sorc/
+cp /lfs/h2/emc/vpppg/noscrub/$LOGNAME/BUFR/bufr/jobs/JGFS_ATMOS_POSTSND4 jobs/
+
